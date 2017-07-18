@@ -123,6 +123,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".ui.CategoryShowActivity">
         </activity>
+        <activity android:name=".ui.FlashActivity"/>
 
 
         <!--我的界面-->
