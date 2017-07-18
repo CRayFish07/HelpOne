@@ -53,7 +53,6 @@ public class MainFragment extends Fragment implements ImainFragment{
     private String mParam;
     private Activity mActivity;
     private String curLocation = "广州市";
-//    private List<NeighborRequestBean> mBeanList;
     private NeighborRequestAdapter mRequestAdapter;
     private LocationClient mLocationClient = null;
     private BDLocationListener mLocationListener;
@@ -83,7 +82,6 @@ public class MainFragment extends Fragment implements ImainFragment{
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         ButterKnife.inject(this, view);
         mTb = (Toolbar) view.findViewById(R.id.tb_main_top);
-        Log.e(TAG, "onCreateView: ");
         mIloadNeighbopr = new LoadNeighborImpe(this);
         initLocation();
         initRefresh();
@@ -96,11 +94,6 @@ public class MainFragment extends Fragment implements ImainFragment{
         mSrlRefresh.setColorSchemeColors(Color.RED);
         mSrlRefresh.setRefreshing(true);
         mIloadNeighbopr.loadNeighborData(curLocation);
-//        mSrlRefresh.post(new Runnable() {
-//            @Override
-//            public void run() {
-//            }
-//        });
         mSrlRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -148,7 +141,6 @@ public class MainFragment extends Fragment implements ImainFragment{
     @Override
     public void freshData(List<DetailEntity> list) {
         if(mRequestAdapter == null){
-            Log.e(TAG, "freshData:   " + "null");
             mBeanList = list;
             mRequestAdapter = new NeighborRequestAdapter(mActivity, list);
             mNeighborList.setAdapter(mRequestAdapter);
