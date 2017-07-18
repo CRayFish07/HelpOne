@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#F0F0F0"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/tb_location_tb"
+            layout="@layout/topbar_main"/>
+
+        <ImageButton
+            android:id="@+id/ibtn_location_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ibtn_tbchat_back"
+            />
+
+        <ImageButton
+            android:id="@+id/ibtn_location_selected"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ibtn_location_selested"
+            />
+    </RelativeLayout>
+
+
+        <com.project.rdc.onehelp.view.EditTextWithDel
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_search_location"
+            android:drawableLeft="@drawable/iv_search"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/iv_delete"
+            android:hint="请输入城市名或拼音"
+            android:paddingBottom="7dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="9dp"
+            android:paddingTop="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:completionThreshold="1"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/country_lvcountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="#606060"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.project.rdc.onehelp.view.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

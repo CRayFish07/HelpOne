@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="12dp"
+    app:elevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hapticFeedbackEnabled="false">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_user_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/photo_empty_photo"
+                android:layout_marginTop="8dp"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="180dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:failureImage="@drawable/photo_empty_photo"
+                fresco:failureImageScaleType="centerInside"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_user_sex"-->
+                <!--android:layout_width="12dp"-->
+                <!--android:layout_height="12dp"-->
+                <!--android:src="@drawable/iv_sex_man"-->
+                <!--android:layout_below="@+id/sdv_user_icon"-->
+                <!--android:layout_toRightOf="@+id/sdv_user_icon"-->
+                <!--android:layout_marginLeft="-8dp"-->
+                <!--android:layout_marginTop="-8dp"/>-->
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="#151515"
+                android:maxLines="1"
+                android:textSize="10sp"
+                android:text="xjhaobang"
+                android:layout_below="@+id/iv_user_sex"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_user_name"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/rl_user">
+
+            <RelativeLayout
+                android:id="@+id/rl_content_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_public_time"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/iv_publish_time"
+                    android:scaleType="fitCenter"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_publish_time"
+                    android:layout_toRightOf="@+id/iv_public_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-11-11 20:52"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_publish_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="生活 维修"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/bg_tv_stype"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_alignBottom="@+id/iv_public_time"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_publish_title"
+                android:layout_below="@+id/rl_content_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:ellipsize="end"
+                android:textColor="#2c2c2c"
+                android:maxLines="2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="天冷了，空调却坏了，求维修,呜呜呜呜wuwuwwwuuwuwuwwwuuw~~"/>
+
+            <com.jaeger.ninegridimageview.NineGridImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ngiv_publish_pic"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tv_publish_title"
+                android:layout_marginTop="5dp"
+                app:singleImgSize="80dp"
+                app:imgGap="5dp"
+                app:maxSize="3"
+                app:showStyle="grid"/>
+
+            <RelativeLayout
+                android:layout_below="@+id/ngiv_publish_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_public_place"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/iv_publish_place"
+                    android:scaleType="fitCenter"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/tv_publish_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_public_place"
+                    android:layout_toLeftOf="@+id/tv_publish_money"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="大学城广东工业大学西区"
+                    android:textSize="11sp"
+                    android:textColor="#515151"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/tv_publish_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="￥20"
+                    android:textColor="#fd6360"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

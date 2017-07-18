@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bgGray"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/topbar_main"/>
+
+        <ImageButton
+            android:id="@+id/iv_publish_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ibtn_tbchat_back"
+            />
+
+        <TextView
+            android:id="@+id/tv_publish_finish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/tv_publish_title"
+            android:gravity="right|center_vertical"
+            android:onClick="click"
+            android:paddingRight="10dp"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:background="@color/white"
+        android:hint="标题"
+        android:padding="10dp"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/content_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请说明你需要发布的内容..."
+        android:maxLength="500"
+        android:padding="10dp"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="#eeeeee"
+        android:divider="@drawable/line_shape"
+        android:orientation="vertical"
+        android:showDividers="end|beginning">
+
+        <LinearLayout
+            android:id="@+id/layout_location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="click"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15sp"
+                android:src="@drawable/iv_publish_location"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="我的位置"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/iv_go_location"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/publish_go"/>
+
+            <GridView
+                android:id="@+id/image_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:numColumns="5"
+                android:padding="10dp"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp">
+            </GridView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_money"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="click"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15sp"
+                android:src="@drawable/iv_publish_money_bag"/>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="悬赏金额"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/iv_go_money"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/publish_go"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_category"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="click"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15sp"
+                android:src="@drawable/iv_publish_sort"/>
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="求助类别"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/iv_go_category"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/publish_go"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_dateline"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="click"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15sp"
+                android:src="@drawable/iv_publish_time"/>
+
+            <TextView
+                android:id="@+id/tv_dateline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="有效期至"
+                android:textColor="@color/item_text_color"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_go_dateline"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/publish_go"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone">
+    </LinearLayout>
+</LinearLayout>

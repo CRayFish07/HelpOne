@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/BaseAppTheme"/>
+    
+    
+    <style name="chatTheme.animation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_in_from_right</item>     <!--A1退出-->
+        <item name="android:activityOpenExitAnimation">@anim/anim_out_from_left</item>      <!--A2出现-->
+        <item name="android:activityCloseEnterAnimation">@anim/anim_in_from_left</item>     <!--A1出现-->
+        <item name="android:activityCloseExitAnimation">@anim/anim_out_from_right</item>    <!--A2退出-->
+    </style>
+
+    <!--登录界面-->
+    <style name="chatTheme" parent="BaseAppTheme">
+        <item name="android:windowAnimationStyle">@style/chatTheme.animation</item>
+    </style>
+
+
+    <style name="StyleFocusItemLinearLayout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:height">130dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+    </style>
+
+    <style name="StyleFocusPressDisplayIv">
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">65dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="StyleFocusItemTv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="StyleFocusItemIconIv">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+</resources>

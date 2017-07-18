@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+    >
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:background="@color/bg_toolbar_color"
+         android:id="@+id/rl_personal_title"
+         android:layout_height="@dimen/activity_title_heigth">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:text="我的"
+             android:textColor="@color/white"
+             android:textSize="@dimen/activity_title"/>
+         <ImageButton
+             android:layout_width="20dp"
+             android:layout_height="20dp"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="13dp"
+             android:background="@drawable/btn_pc_set" />
+     </RelativeLayout>-->
+    <RelativeLayout
+        android:id="@+id/rl_personal_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/topbar_main"/>
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_pc_set"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/sr_pc_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_personal_title"
+        >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_personal_title"
+            android:background="@color/bgGray"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_personal_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:paddingBottom="15dp">
+
+                    <!-- android:src="@drawable/u1f436"-->
+
+
+                    <ImageView
+                        android:id="@+id/iv_user_sex"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/sdv_pc_icon"
+                        android:layout_marginLeft="-22dp"
+                        android:layout_marginTop="-22dp"
+                        android:layout_toRightOf="@+id/sdv_pc_icon"
+                        android:src="@drawable/iv_sex_man"
+                        android:visibility="gone"/>
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/iv_pc_sex"-->
+                    <!--android:layout_width="18dp"-->
+                    <!--android:layout_height="18dp"-->
+                    <!--android:layout_toEndOf="@id/tv_pc_name"-->
+                    <!--android:layout_alignTop="@id/tv_pc_name"-->
+                    <!--android:layout_marginTop="3dp"-->
+                    <!--android:layout_marginStart="10dp"-->
+                    <!--android:background="@drawable/iv_sex_man" />-->
+
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_pc_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitCenter"
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:failureImageScaleType="centerInside"
+                        fresco:roundAsCircle="true"
+                        fresco:backgroundImage="@drawable/iv_pc_icon"
+                        fresco:roundingBorderWidth="1dp"
+                        fresco:roundingBorderColor="@color/white"
+                        fresco:roundedCornerRadius="180dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_pc_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_user_sex"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:maxWidth="220dp"
+                        android:text="研发一棵草"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pc_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_personal_information"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:id="@+id/tv_pc_likeNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:gravity="center"
+                            android:text="5"
+                            android:textColor="@color/brickRed"
+                            android:textSize="23sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_pc_likeNum"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:text="关注"
+                            android:textColor="@color/littleBlack"
+                            android:textSize="13sp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:id="@+id/tv_pc_friendNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:gravity="center"
+                            android:text="5"
+                            android:textColor="@color/brickRed"
+                            android:textSize="23sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_pc_friendNum"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="好友"
+                            android:textColor="@color/littleBlack"
+                            android:textSize="13sp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:id="@+id/tv_pc_complete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:gravity="center"
+                            android:text="75%"
+                            android:textColor="@color/brickRed"
+                            android:textSize="23sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_pc_complete"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="完成率"
+                            android:textColor="@color/littleBlack"
+                            android:textSize="13sp"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_pc_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ll_pc_num"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/bgGray"
+                    >
+
+                    <com.project.rdc.onehelp.view.ListViewForScrollView
+                        android:id="@+id/lvfs_pc_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:dividerHeight="0.1dp"
+                        android:divider="@color/bgGray"
+                        android:background="@color/bgGray"
+                        >
+
+                    </com.project.rdc.onehelp.view.ListViewForScrollView>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

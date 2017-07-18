@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_focus_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgGray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/tb_chatroom_tb"
+            layout="@layout/topbar_main"/>
+
+        <ImageButton
+            android:id="@+id/ibtn_login_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ibtn_tbchat_back"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:columnCount="3"
+            app:rowCount="6"
+            app:useDefaultMargins="true">
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_repairing"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="维修"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_repairing"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_delivering"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="帮送"/>
+
+
+                <ImageView
+                    android:id="@+id/iv_focus_delivering"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_shopping"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="帮买"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_shopping"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_help_do_sth"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="办事"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_doing_sth"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_car"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="用车"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_using_car"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_rent_house"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="租房"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_rent_house"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_education"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="教育"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_education"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_photo"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="摄影"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_photo"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_foucs_painting"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="手绘"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_painting"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_part_time"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="兼职"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_part_time"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_housework"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="家政"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_housework"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                style="@style/StyleFocusItemLinearLayout"
+                android:gravity="center"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center">
+
+                <ImageView
+                    style="@style/StyleFocusItemIconIv"
+                    android:src="@drawable/ic_other"/>
+
+                <TextView
+                    style="@style/StyleFocusItemTv"
+                    android:text="其他"/>
+
+                <ImageView
+                    android:id="@+id/iv_focus_others"
+                    style="@style/StyleFocusPressDisplayIv"
+                    android:background="@drawable/bg_round_btn_lt_green"
+                    android:src="@drawable/iv_add_follow_white"/>
+            </LinearLayout>
+        </android.support.v7.widget.GridLayout>
+    </ScrollView>
+</LinearLayout>

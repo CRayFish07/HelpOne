@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fd6360</color>
+    <color name="colorPrimaryDark">#fd6360</color>
+  <!--  <color name="colorPrimaryDark">#a63f3d</color>-->
+    <color name="colorAccent">#FFC107</color>
+
+    //一套标准颜色
+    <color name="dkgray">#80808FF0</color>
+    <color name="yello">#F8F8FF00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkgray">#938192</color>
+    <color name="lightgreen">#7cd12e</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="cyan">#ff00ffff</color>
+    <color name="gray">#ff888888</color>
+    <color name="green">#ff00ff00</color>
+    <color name="ltgray">#ffcccccc</color>
+    <color name="magenta">#ffff00ff</color>
+    <color name="red">#ffff0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#ffffff00</color>
+
+    //背景颜色
+    <color name="bgGray">#e7efefef</color>
+
+    //附近界面自定义颜色
+    <color name="bg_tv_stype">#cc43e19d</color>
+    <color name="bg_toolbar_color">#ed3e28</color>
+
+
+    //详情界面自定义颜色
+    <color name="brickRed">#f56161</color>
+    <!--<color name="bgGray">#e7e6e6e6</color>-->
+    <color name="liteGreen">#ee01b926</color>
+    //个人中心界面自定义颜色
+
+    //个人中心界面自定义颜色
+    <color name="littleBlack">#181818</color>
+
+    //聊天界面
+
+    //我的界面字体颜色
+    <color name="item_text_color">#898989</color>
+    <color name="refresh_color">#009dff</color>
+
+
+    <!--主界面导航栏字体-->
+    <color name="tab_text_normal">#212121</color>
+    <color name="comui_tab_text_color">#7c7d7d</color>
+
+
+
+</resources>
