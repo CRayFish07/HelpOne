@@ -41,17 +41,13 @@ public class NeighborData {
         query.findObjects(new FindListener<DetailEntity>() {
             @Override
             public void done(List<DetailEntity> list, BmobException e) {
-                Log.e(TAG, "done:     有执行");
                 if(e == null){
                     mList = list;
-                    Log.e(TAG, "done:  获取数据 " + list.size());
                     loadPresenter.freshFragment(list);
                 }else {
-                    Log.e(TAG, "done: "+"bmob失败"+e.getMessage());
                 }
             }
         });
-        Log.e(TAG, "getNeighborData: "+ mList.size());
     }
 
     /**
@@ -69,7 +65,6 @@ public class NeighborData {
                 if(e == null){
                     mList = list;
                 }else {
-                    Log.e(TAG, "done: "+"bmob失败"+e.getMessage());
                 }
             }
         });

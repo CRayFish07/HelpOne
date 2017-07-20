@@ -18,7 +18,6 @@ import io.rong.imlib.model.Conversation;
 
 
 public class ChatFragment extends Fragment implements View.OnClickListener {
-
     private LinearLayout mLlSystem;
     private Toolbar mToolbar;
     private TextView mTextView;
@@ -51,7 +50,6 @@ public class ChatFragment extends Fragment implements View.OnClickListener {
         transaction.commitAllowingStateLoss();
 
     }
-
 
     @Override
     public void onClick(View v) {
