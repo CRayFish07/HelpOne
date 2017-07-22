@@ -141,7 +141,6 @@ public class LocationActivity extends BaseActivity {
         GridView mGvCity = (GridView) headView.findViewById(R.id.gv_hot_city);
         mTvCuLocation = (TextView)headView.findViewById(tv_city_name);
         mTvCuLocation.setText(mLocationName);
-//        String[] datas = getResources().getStringArray(R.array.city);
         String[] datas = Finaldata.cityHot.split(",");
         ArrayList<String> cityList = new ArrayList<>();
         for (int i = 0; i < datas.length; i++) {
@@ -197,10 +196,6 @@ public class LocationActivity extends BaseActivity {
         return mSortList;
     }
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("Location Page") // TODO: Define a title for the content shown.
@@ -217,8 +212,6 @@ public class LocationActivity extends BaseActivity {
     public void onStart() {
         super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         mClient.connect();
         AppIndex.AppIndexApi.start(mClient, getIndexApiAction());
     }
@@ -227,8 +220,6 @@ public class LocationActivity extends BaseActivity {
     public void onStop() {
         super.onStop();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(mClient, getIndexApiAction());
         mClient.disconnect();
     }

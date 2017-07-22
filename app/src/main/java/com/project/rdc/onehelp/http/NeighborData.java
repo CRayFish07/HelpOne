@@ -1,7 +1,5 @@
 package com.project.rdc.onehelp.http;
 
-import android.util.Log;
-
 import com.project.rdc.onehelp.entity.DetailEntity;
 import com.project.rdc.onehelp.presenter.LoadNeighborImpe;
 
@@ -17,7 +15,6 @@ import cn.bmob.v3.listener.FindListener;
  */
 
 public class NeighborData {
-    private static final String TAG = "NeighborData";
     private List<DetailEntity> mList; //附近界面数据List
     private int page = 0;  //当前页数
     private int onePageSum = 20;  //一页的数据条数
